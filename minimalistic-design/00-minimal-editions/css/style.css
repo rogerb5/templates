@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    color: #333;
+    font-size: calc(12px + 0.3vmax);
+}
+
+body {
+    font-family: 'PT Mono', monospace;
+    line-height: 1.5;
+}
+
+p {
+    margin: 1.3em 0;
+}
+
+
+h1,
+h2 {
+    text-wrap: balance;
+}
+
+:root {
+    --component-padding: 1rem;
+    --nav-height: 20px;
+    --p-margin: 0.4rem;
+}
+
+section {
+    padding: var(--component-padding);
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+div.div-bg {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/paper.jpeg);
+    z-index: -1;
+    background-size: 100% auto;
+    background-position: 50% 50%;
+    opacity: 0.2;
+    transition: opacity 500ms ease;
+}
+
+div.div-bg.clear {
+    opacity: 0;
+}
+
+/* Navigation bar styling ***********/
+nav.nav {
+    min-height: var(--nav-height / 2);
+    padding: var(--component-padding);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: last baseline;
+    justify-content: space-between;
+}
+
+nav.nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* First section styling **************/
+div.fs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 240px));
+    gap: 0.3rem;
+}
+
+section .fs-p {
+    margin-bottom: var(--p-margin);
+}
+
+div.fs-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Second Section Styling **********/
+div.ss-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 310px));
+    gap: 0.3rem;
+}
+
+div.ss-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer Styling ***************/
+footer {
+    padding: var(--component-padding);
+}
+
+footer article p {
+    margin-bottom: var(--p-margin);
+}
+
+/* Main overlay Component *****************************/
+main.m-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+}
+
+main.m-overlay.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+main.m-overlay nav {
+    min-height: var(--nav-height);
+    padding: var(--component-padding);
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+main.m-overlay nav button {
+    padding: 0.5rem 1.2rem 0.5rem 1.2rem;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    background-color: transparent;
+    font-family: 'PT Mono', monospace;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+div.m-overlay-d {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.m-overlay-d img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    padding: var(--component-padding);
+}
+
+section.m-overlay-s {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+}
+
+/* Prev and next button */
+div.btn {
+    z-index: 2;
+    border: 0;
+}
+
+div.prev {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 90%;
+    width: 50%;
+    cursor: w-resize;
+}
+
+div.next {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 90%;
+    width: 50%;
+    cursor: e-resize;
+}

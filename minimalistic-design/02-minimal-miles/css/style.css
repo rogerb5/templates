@@ -1,0 +1,170 @@
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-padding: 1.3rem;
+    --main-bg-color: whitesmoke;
+}
+
+/*** General Settings *************/
+html,
+body {
+    height: 100%;
+    font-size: calc(12px + 0.3vmax);
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
+
+body {
+    line-height: 1.5;
+}
+
+li {
+    list-style-type: none;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 1.3em 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1,
+h2 {
+    text-wrap: balance;
+}
+
+/* Word Section ***********/
+section.word-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section.word-container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    display: block;
+}
+
+section.word-container h2.unactive {
+    display: none;
+}
+
+/* Quote Image ***********/
+img.img-quote {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vh;
+    height: 40vw;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    display: none;
+}
+
+img.img-quote.active {
+    display: block;
+}
+
+/* Div Buttons */
+div.btn {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+div.btn:focus {
+    outline: none;
+}
+
+div.prev {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 90%;
+    width: 50%;
+    cursor: w-resize;
+}
+
+div.next {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 90%;
+    width: 50%;
+    cursor: e-resize;
+}
+
+/****** Main Overlay Grid *********/
+main.overlay-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+    opacity: 0;
+    z-index: -1;
+}
+
+main.overlay-grid.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+section.grid {
+    display: flex;
+    justify-content: space-around;
+    padding: var(--main-padding);
+}
+
+article.article-p {
+    padding: var(--main-padding);
+}
+
+/* Footer *****/
+footer.nav-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--main-padding);
+    display: flex;
+    justify-content: space-around;
+}
+
+div.f-div {
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+
+button.button,
+button.title {
+    background-color: whitesmoke;
+    border: none;
+    outline: 0;
+    font-size: 1rem;
+}
+
+button.button,
+button.title:hover {
+    cursor: pointer;
+}

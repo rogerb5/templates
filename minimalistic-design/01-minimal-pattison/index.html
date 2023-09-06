@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portfolio Sample</title>
+    <meta name="description" content="Portfolio Sample Made from Scratch, Web Design, Roger, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <p>Sample Portfolios</p>
+        <!-- <button class="nav-btn">Pause</button> -->
+        <ul class="u-list">
+            <li class="open-btn" data-filter="fg" id="nav-btn">Gallery One
+                <img src="img/image1.jpeg" class="list-img" alt="Model with t-shirt">
+            </li>
+            <li class="open-btn" data-filter="sg" id="nav-btn">Gallery Two
+                <img src="img/image2.jpeg" class="list-img" alt="Model with cardigan">
+            </li>
+            <li class="open-btn" data-filter="fg" id="nav-btn">Gallery One
+                <img src="img/image4.jpeg" class="list-img" alt="Model with t-shirt">
+            </li>
+            <li class="open-btn" data-filter="sg" id="nav-btn">Gallery Two
+                <img src="img/image3.jpeg" class="list-img" alt="Model with cardigan">
+            </li>
+            <li class="open-btn" data-filter="fg" id="nav-btn">Gallery One
+                <img src="img/image6.jpeg" class="list-img" alt="Model with t-shirt">
+            </li>
+            <li class="open-btn" data-filter="sg" id="nav-btn">Gallery Two
+                <img src="img/image7.jpeg" class="list-img" alt="Model with cardigan">
+            </li>
+            <li class="open-btn" data-filter="fg" id="nav-btn">Gallery One
+                <img src="img/image12.jpeg" class="list-img" alt="Model with t-shirt">
+            </li>
+            <li class="open-btn" data-filter="sg" id="nav-btn">Gallery Two
+                <img src="img/image10.jpeg" class="list-img" alt="Model with cardigan">
+            </li>
+
+        </ul>
+    </nav>
+
+    <main class="overlay">
+        <nav class="overlay-nav">
+            <button class="close-btn">Home</button>
+            <div class="dropdown">
+                <button class="btn">All Galleries</button>
+                <div class="dropdown-menu">
+                    <li class="open-btn" data-filter="fg">Gallery One
+                        <img src="img/image1.jpeg" class="list-img" alt="Model with t-shirt">
+                    </li>
+
+                    <li class="open-btn" data-filter="sg">Gallery Two
+                        <img src="img/image2.jpeg" class="list-img" alt="Model with cardigan">
+                    </li>
+                </div>
+            </div>
+            <p class="p-gal">Gallery One</p>
+            <p class="counter">01 | 6</p>
+        </nav>
+
+        <div class="overlay-d" class="fg" id="first">
+            <img src="img/image1.jpeg" data-filter="fg" class="fg-img" alt="model with a white t-shirt">
+            <img src="img/image3.jpeg" data-filter="fg" class="fg-img" alt="female model with a pink t-shirt">
+            <img src="img/image5.jpeg" data-filter="fg" class="fg-img" alt="a model with a bmx bike">
+            <img src="img/image6.jpeg" data-filter="fg" class="fg-img" alt="a model with glasses">
+        </div>
+
+        <div class="overlay-d" class="sg" id="second">
+            <img src="img/image2.jpeg" class="sg-img" alt="Model with cardigan">
+            <img src="img/image8.jpeg" data-filter="sg" class="sg-img" alt="model with shades">
+            <img src="img/image9.jpeg" data-filter="sg" class="sg-img" alt="female model with t-shirt">
+            <img src="img/image10.jpeg" data-filter="sg" class="sg-img" alt="model with hat">
+            <img src="img/image11.jpeg" data-filter="sg" class="sg-img" alt="a couple laughing">
+            <img src="img/image12.jpeg" data-filter="sg" class="sg-img" alt="white t-shirt">
+        </div>
+
+        <div class="prev btn"></div>
+        <div class="next btn"></div>
+    </main>
+
+    <!-- <canvas></canvas> -->
+    <!-- <script src="js/background.js"></script> -->
+    <script src="js/carousel.js"></script>
+</body>
+
+</html>

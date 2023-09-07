@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Supreme';
+    src: url(../assets/Supreme-Variable.ttf);
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Supreme', Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
+header {
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-variation-settings: 'wght' 700;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: currentColor;
+    text-underline-offset: 2px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0fr 0fr 0fr;
+    gap: 0;
+    width: 100%;
+    cursor: e-resize;
+    padding: 1rem 0.5rem;
+    transition: grid-template-columns 0.4s;
+}
+
+section div {
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+section div.hide {
+    opacity: 0;
+}
+
+img {
+    max-width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+figure {
+    width: 100%;
+    padding: 0 0.5rem;
+}
+
+figcaption {
+    max-width: 10rem;
+    margin: 0.25rem 0 0 0;
+}
